@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Para o meu Amor</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*O CÓDIGO DO AMOR</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Olá, Meu anjinho!<br />
+			Você se lembra do dia em que nos conhecemos?<br />
+			<span class="comments">// Em uma quinta-feira, que parecia ser comum, mas que mudou minha vida de uma forma que eu nunca poderia imaginar.</span><br />
+			Aquela simples mensagem... quem diria que ela me faria o homem mais feliz do mundo?<br />
+			<span class="comments">// Desde aquele momento, não consigo parar de pensar no seu rosto, no seu jeitinho, na sua beleza...
+				Cada detalhe seu me encanta de uma maneira que não consigo explicar.<br />
+			</span><br />
+			Eu te amo por inteira, minha princesa, e a cada dia meu coração se enche mais de amor por você.<br />
+			Você me mostrou que o amor verdadeiro existe, e eu tenho a sorte de vivê-lo ao seu lado.
+A cada sorriso, a cada gesto, a cada palavra, meu amor por você só cresce, e posso dizer com certeza: te amo mais e mais a cada dia que passa.<br />
+			Eu quero tudo contigo, meu amor.<br />
+			Quero viver todos os momentos, superar os desafios e celebrar as vitórias. Quero construir um futuro lindo ao seu lado, onde o amor seja a nossa base.<br />
+			Ei, nunca se esqueça: eu te amo mais que tudo neste mundo, e sempre estarei ao seu lado, em cada passo da nossa jornada.<br />
+			Você é o meu maior tesouro, e a cada dia ao seu lado, me sinto a pessoa mais abençoada do mundo.<br />
+			<span class="comments">// EU TE AMO!!!</span><br />
+			<br>
+			<br>
+			E você pode ter toda certeza do mundo que eu te amarei para sempre <3<br />
+			Meu anjinho, eu fiz isso com todo o carinho do mundo pra você... clique no coração<br />
+			<br>
+			<span id="heartspan">
+			<a href="https://www.youtube.com/@1Ricardo66"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Meu anjinho
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					    EU TE AMO MAIS QUE TUDO!<br/>
+					<div class="signature">- RICARDO</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 40;
+var together = new Date();
+together.setFullYear(2024, 7);
+together.setDate(29)
+together.setHours(10);
+together.setMinutes(58);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
